@@ -1,5 +1,6 @@
 package com.mine.conf;
 
+import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
@@ -17,6 +18,12 @@ public class ElasticSearchPlusAutoConfig {
     @ConditionalOnBean(ElasticsearchTemplate.class)
     @Configuration(proxyBeanMethods = false)
     public static class EsTemplateAutoConfig {
+
+    }
+
+    @ConditionalOnBean(RestHighLevelClient.class)
+    @Configuration(proxyBeanMethods = false)
+    public static class EsRestHighLevelClientConfig {
 
     }
 }
