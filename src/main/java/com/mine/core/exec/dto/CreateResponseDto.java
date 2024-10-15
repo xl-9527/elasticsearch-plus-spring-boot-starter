@@ -1,4 +1,4 @@
-package com.mine.exec.dto;
+package com.mine.core.exec.dto;
 
 /**
  * @author xl-9527
