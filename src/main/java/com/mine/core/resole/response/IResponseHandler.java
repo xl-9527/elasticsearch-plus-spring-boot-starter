@@ -1,4 +1,4 @@
-package com.mine.resole.response;
+package com.mine.core.resole.response;
 
 /**
  * @author xl-9527

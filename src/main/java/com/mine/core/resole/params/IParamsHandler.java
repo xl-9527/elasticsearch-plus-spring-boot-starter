@@ -1,4 +1,4 @@
-package com.mine.resole.params;
+package com.mine.core.resole.params;
 
 /**
  * @author xl-9527
