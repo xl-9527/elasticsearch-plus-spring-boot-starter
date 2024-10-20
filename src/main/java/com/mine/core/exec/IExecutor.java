@@ -1,9 +1,8 @@
 package com.mine.core.exec;
 
-import com.mine.core.exec.dto.CreateResponseDto;
-import com.mine.core.exec.dto.DeleteResponseDto;
-import com.mine.core.exec.dto.SearchResponseDto;
-import com.mine.core.exec.dto.UpdateResponseDto;
+import com.mine.core.exec.dto.*;
+
+import java.io.IOException;
 
 /**
  * @author xl-9527
@@ -11,11 +10,15 @@ import com.mine.core.exec.dto.UpdateResponseDto;
  **/
 public interface IExecutor {
 
-    SearchResponseDto search();
+    <T> SearchResponseDto<T> search(SearchDto<T> searchDto) throws IOException;
 
     UpdateResponseDto update();
 
     CreateResponseDto create();
 
     DeleteResponseDto delete();
+
+    SqlResponseDto _sql();
+
+    NodesResponseDto _nodes();
 }
